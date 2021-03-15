@@ -1,0 +1,30 @@
+{
+  "name": "pbergman/doctrine-export-bundle",
+  "description": "Bundle for exporting query results.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Philip Bergman",
+      "email": "bergman@activin.nl"
+    }
+  ],
+  "require": {
+    "php": ">7.3",
+    "symfony/http-kernel": "^4.4",
+    "doctrine/dbal": "^2",
+    "sonata-project/exporter": "^2",
+    "symfony/console": "^4.4",
+    "symfony/config": "^4.4",
+    "symfony/dependency-injection": "^4.4"
+  },
+  "require-dev": {
+    "symfony/http-client": "^4.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "PBergman\\Bundle\\DoctrineExportBundle\\": "src/"
+    }
+  }
+}
