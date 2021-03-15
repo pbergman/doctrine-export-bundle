@@ -17,10 +17,10 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->info('Predefined export queries.')
             ->normalizeKeys(false)
-            ->useAttributeAsKey('name', false)
+            ->useAttributeAsKey('name')
             ->arrayPrototype()
                 ->children()
-                    ->scalarNode('name')->isRequired()->end()
+                    ->scalarNode('name')->end()
                     ->scalarNode('connection')->defaultValue('default')->end()
                     ->scalarNode('description')->end()
                     ->scalarNode('query')->isRequired()->end()

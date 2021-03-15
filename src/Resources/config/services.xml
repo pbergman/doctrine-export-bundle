@@ -4,5 +4,21 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
+        <service id="PBergman\Bundle\DoctrineExportBundle\Exporter\SourceBuilderManager"/>
+
+        <service id="PBergman\Bundle\DoctrineExportBundle\Command\ListCommand">
+            <argument type="service" id="PBergman\Bundle\DoctrineExportBundle\Exporter\SourceBuilderManager"/>
+            <tag name="console.command"/>
+        </service>
+
+        <service id="PBergman\Bundle\DoctrineExportBundle\Command\ExecCommand">
+            <argument type="service" id="PBergman\Bundle\DoctrineExportBundle\Exporter\SourceBuilderManager"/>
+            <tag name="console.command"/>
+        </service>
+
+        <service id="PBergman\Bundle\DoctrineExportBundle\Command\RawCommand">
+            <argument type="service" id="doctrine"/>
+            <tag name="console.command"/>
+        </service>
     </services>
 </container>
